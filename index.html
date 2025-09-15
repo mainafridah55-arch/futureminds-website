@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMinds - Future Skills for Young Minds</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
+    }
+    /* Navbar */
+    .navbar {
+      background: #0077b6;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .logo { font-weight:bold; font-size:1.5em; margin-right:auto; }
+    .nav-links { list-style:none; display:flex; flex-wrap:wrap; padding:0; margin:0; }
+    .nav-links li { margin:0 10px; position:relative; }
+    .nav-links a { color:white; text-decoration:none; padding:5px 10px; }
+    .nav-links .dropdown:hover .dropdown-menu { display:block; }
+    .dropdown-menu {
+      display:none;
+      position:absolute;
+      top:35px; left:0;
+      background:#00b4d8;
+      list-style:none;
+      padding:10px;
+      border-radius:5px;
+    }
+    .dropdown-menu li { margin:5px 0; }
+    .dropdown-menu a { color:white; }
+
+    /* Hero */
+    .hero {
+      background:url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg') center/cover no-repeat;
+      color:white;
+      text-align:center;
+      padding:100px 20px;
+    }
+    .hero h1 { font-size:3em; margin-bottom:10px; }
+    .hero p { font-size:1.2em; margin:5px 0; }
+    .hero button { background:#ff6f61; color:white; border:none; padding:10px 20px; border-radius:10px; cursor:pointer; margin-top:15px; }
+
+    /* Courses Grid */
+    .courses-container {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:20px;
+      padding:40px 20px;
+    }
+    .course {
+      background:#FFF3E6;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      display:flex;
+      flex-direction:column;
+      transition:transform 0.2s;
+      text-align:center;
+    }
+    .course:hover { transform:translateY(-5px); }
+    .course img { width:100%; height:180px; object-fit:cover; }
+    .course h3 { background:#ff6f61; color:white; margin:0; padding:10px; }
+    .course ul { list-style:none; padding:10px 20px; margin:0; flex-grow:1; text-align:left; }
+    .course ul li { margin-bottom:10px; }
+    .course a { display:block; text-align:center; background:#ff8f7e; color:white; padding:10px; margin:10px 20px 20px 20px; border-radius:8px; text-decoration:none; }
+    .course a:hover { background:#ff6f61; }
+
+    /* Footer */
+    footer {
+      background:#0077b6;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+    footer a { color:white; margin:0 5px; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="logo">FutureMinds</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Admissions ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="fees.html">Fees Structure</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Courses ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="early-learners.html">Early Learners</a></li>
+            <li><a href="juniors.html">Juniors</a></li>
+            <li><a href="teens.html">Teens</a></li>
+            <li><a href="digital-literacy.html">Digital Literacy</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">More ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="news.html">News</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </li><a href="student-dashboard.html">Student Portal</a></li>
+"
+        <li><a href="search.html">Search</a></li>
+      </ul>
+    </nav>
+
+   <!-- Hero Section -->
+<section class="hero" 
+  style="background:url('https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg') center/cover no-repeat; 
+         color:white; 
+         text-align:center; 
+         padding:100px 20px; 
+         position:relative;">
+  <div style="background: rgba(0,0,0,0.5); padding:40px; border-radius:15px; display:inline-block;">
+    <h1 style="font-size:3em; margin-bottom:20px;">Future Skills for Young Minds</h1>
+    <p style="font-size:1.2em; margin-bottom:10px;">Engaging coding classes for ages 4–16.</p>
+    <p style="font-size:1.2em; margin-bottom:20px;">Learn coding, AI, and digital literacy through fun, hands-on lessons.</p>
+    <button id="openForm" style="padding:15px 30px; background:#ff6f61; color:white; font-size:1.2em; border-radius:12px; border:none; cursor:pointer;">
+      Try a Free Lesson
+    </button>
+  </div>
+</section>
+
+<!-- Pop-up Form -->
+<div id="registrationForm" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+     background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000;">
+  <div style="background:white; padding:40px; border-radius:15px; width:90%; max-width:500px; position:relative; text-align:left;">
+    <span id="closeForm" style="position:absolute; top:15px; right:20px; font-size:1.5em; cursor:pointer;">&times;</span>
+    <h2 style="color:#ff6f61; margin-bottom:20px;">Register for a Free Lesson</h2>
+    <form>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;" required><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;" required><br>
+
+      <label for="age">Child's Age:</label><br>
+      <input type="number" id="age" name="age" style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;" required><br>
+
+      <label for="course">Preferred Course:</label><br>
+      <select id="course" name="course" style="width:100%; padding:10px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;">
+        <option value="early-learners">Early Learners (4–8)</option>
+        <option value="juniors">Juniors (9–12)</option>
+        <option value="teens">Teens (13–16)</option>
+        <option value="digital-literacy">Digital Literacy / Computer Packages</option>
+      </select><br>
+
+      <button type="submit" style="width:100%; padding:15px; background:#ff6f61; color:white; border:none; border-radius:12px; font-size:1.1em; cursor:pointer;">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- JS to Handle Pop-up -->
+<script>
+  const openForm = document.getElementById('openForm');
+  const closeForm = document.getElementById('closeForm');
+  const registrationForm = document.getElementById('registrationForm');
+
+  openForm.addEventListener('click', () => {
+    registrationForm.style.display = 'flex';
+  });
+
+  closeForm.addEventListener('click', () => {
+    registrationForm.style.display = 'none';
+  });
+
+  // Close form if clicking outside the pop-up
+  window.addEventListener('click', (e) => {
+    if(e.target === registrationForm) {
+      registrationForm.style.display = 'none';
+    }
+  });
+</script>
+
+    <!-- Course Portfolio -->
+    <h2 class="section-title" style="text-align:center; color:#ff6f61; margin-top:40px;">Course Portfolio (Ages 4–16)</h2>
+    <div id="courses" class="courses-container">
+      <!-- Early Learners -->
+      <div class="course">
+        <img src="https://images.pexels.com/photos/7743253/pexels-photo-7743253.jpeg" alt="Early Learners">
+        <h3>Early Learners (Ages 4–8)</h3>
+        <ul>
+          <li><b>Scratch Jr. & Scratch Play</b> – Learn sequencing, logic, animations, and interactive stories.</li>
+          <li><b>Creative Computing</b> – Digital drawing, storytelling with Scratch, basic games.</li>
+        </ul>
+        <a href="early-learners.html">View Details</a>
+      </div>
+      <!-- Juniors -->
+      <div class="course">
+        <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg" alt="Juniors Coding">
+        <h3>Juniors (Ages 9–12)</h3>
+        <ul>
+          <li><b>Scratch & Game Development</b> – Build animations, games, and interactive projects.</li>
+          <li><b>Transition to Python</b> – Basics of text coding with fun projects.</li>
+          <li><b>App Development Basics</b> – Simple mobile/web apps (block + Python).</li>
+          <li><b>Roblox Game Design (optional)</b> – Build worlds with Lua scripting.</li>
+        </ul>
+        <a href="juniors.html">View Details</a>
+      </div>
+      <!-- Teens -->
+      <div class="course">
+        <img src="https://images.pexels.com/photos/9783370/pexels-photo-9783370.jpeg" alt="Teens Programming">
+        <h3>Teens (Ages 13–16)</h3>
+        <ul>
+          <li><b>Python Programming</b> – Games, apps, problem-solving.</li>
+          <li><b>Web Development</b> – HTML, CSS, JavaScript, responsive websites.</li>
+          <li><b>AI & Data Science Basics</b> – Simple AI models, chatbots, image recognition.</li>
+          <li><b>Advanced Python & Algorithms</b> – Data structures, coding prep.</li>
+          <li><b>Java Programming (optional)</b> – AP Computer Science prep.</li>
+        </ul>
+        <a href="teens.html">View Details</a>
+      </div>
+      <!-- Digital Literacy -->
+      <div class="course">
+        <img src="https://images.pexels.com/photos/4709291/pexels-photo-4709291.jpeg" alt="Digital Literacy">
+        <h3>Digital Literacy / Computer Packages (All Ages)</h3>
+        <ul>
+          <li><b>Basic Computer Skills</b> – Windows, file management, internet & email.</li>
+          <li><b>Microsoft Office Suite</b> – Word, Excel, PowerPoint.</li>
+          <li><b>Safe Internet & Cyber Hygiene</b> – Online safety & digital responsibility.</li>
+        </ul>
+        <a href="digital-literacy.html">View Details</a>
+      </div>
+      <!-- Enrichment -->
+      <div class="course">
+        <img src="https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg" alt="Enrichment Programs">
+        <h3>Enrichment Programs</h3>
+        <ul>
+          <li><b>Holiday Coding Camps</b> – 2–4 weeks.</li>
+          <li><b>Hackathons / Coding Challenges</b>.</li>
+          <li><b>Certificates</b> – Self-issued first, accredited later.</li>
+        </ul>
+        <a href="enrichment.html">View Details</a>
+      </div>
+    </div>
+  </div> <!-- End of content -->
+  <!-- Why Choose Us Section -->
+<section class="why-choose-us" style="background:#fffae6; padding:50px 20px; text-align:center; border-radius:12px; margin:40px 20px;">
+  <h2 style="color:#ff6f61; margin-bottom:30px; font-size:2.5em;">Why Choose FutureMinds?</h2>
+  <p style="color:#333; max-width:700px; margin:0 auto 40px;">At FutureMinds, learning coding, AI, and digital literacy is fun, engaging, and effective. Here’s why families love us:</p>
+  
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; max-width:1000px; margin:0 auto;">
+    
+    <div style="background:#ffcccb; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor:pointer;">
+      <h3 style="color:#d90429;">Interactive Learning</h3>
+      <p>Hands-on projects, coding games, and fun exercises that make learning exciting.</p>
+    </div>
+    
+    <div style="background:#ffd6a5; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor:pointer;">
+      <h3 style="color:#f3722c;">Expert Instructors</h3>
+      <p>Skilled educators guide students step by step with personalized attention.</p>
+    </div>
+    
+    <div style="background:#caffbf; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor:pointer;">
+      <h3 style="color:#40916c;">Flexible & Accessible</h3>
+      <p>Online courses available anytime, allowing students to learn at their own pace.</p>
+    </div>
+    
+    <div style="background:#9bf6ff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor:pointer;">
+      <h3 style="color:#118ab2;">Safe & Supportive</h3>
+      <p>A secure digital space where students feel encouraged to explore and grow.</p>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contact">
+      <p><strong>Contact Us:</strong> info@futureminds.com | +254 700 000000</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="digital-literacy.html">Digital Literacy</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="news.html">News</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2025 FutureMinds. All rights reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </div>
+  </footer>
+</body>
+</html>

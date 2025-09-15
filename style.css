@@ -1,0 +1,271 @@
+/* ========== General Reset ========== */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f9fff9; /* soft green tint */
+  color: #222;
+}
+
+/* ========== Navbar ========== */
+<style>
+/* Navbar */
+.navbar {
+  background: #0077b6;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo { font-weight:bold; font-size:1.5em; margin-right:auto; }
+.nav-links { list-style:none; display:flex; flex-wrap:wrap; padding:0; margin:0; }
+.nav-links li { margin:0 10px; position:relative; }
+.nav-links a { color:white; text-decoration:none; padding:5px 10px; display:block; }
+
+.dropdown-menu {
+  display:none;
+  position:absolute;
+  top:35px; left:0;
+  background:#00b4d8;
+  list-style:none;
+  padding:10px;
+  border-radius:5px;
+  pointer-events:auto; /* ensures proper hover */
+  z-index:100;
+}
+
+.dropdown:hover .dropdown-menu {
+  display:block;
+}
+
+.dropdown-menu li { margin:5px 0; }
+.dropdown-menu a { color:white; }
+</style>
+
+/* ========== Hero Section ========== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(46,125,50,0.85), rgba(46,125,50,0.85)),
+              url('https://unsplash.com/photos/GXvdxPVWZWE/download?force=true&w=1600') 
+              no-repeat center center/cover;
+  color: white;
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.hero-button {
+  padding: 15px 35px;
+  background-color: #ffeb3b;
+  color: #1b5e20;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.hero-button:hover {
+  background-color: #fdd835;
+}
+
+/* ========== Section Title ========== */
+.section-title {
+  color: #2e7d32;
+  margin-top: 50px;
+  font-size: 2.2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ========== Courses Section ========== */
+#courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 25px;
+  padding: 0 20px;
+}
+.course {
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background: #ffffff;
+  color: #333;
+  text-align: left;
+  transition: transform 0.3s;
+}
+.course:hover {
+  transform: translateY(-8px);
+}
+.course img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.course h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+.view {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.view:hover {
+  background-color: #388e3c;
+}
+
+/* ========== Main Content (Admissions & Fees) ========== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+main h1, main h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+/* ========== Pricing Grid (Tables Green & Bright) ========== */
+.fees-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.fees-section .intro {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.fee-table {
+  margin-bottom: 40px;
+}
+
+.fee-table h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffeb3b;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.fee-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table th, .fee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #c8e6c9; /* light green border */
+}
+
+.fee-table th {
+  background-color: #2e7d32;
+  color: white;
+  font-weight: bold;
+}
+
+.fee-table tbody tr:nth-child(even) {
+  background-color: #e8f5e9; /* very light green */
+}
+
+.fee-table tbody tr:hover {
+  background-color: #c8e6c9; /* light green highlight */
+}
+
+.additional-fees {
+  background: #f1f8e9; /* pale green */
+  padding: 20px;
+  border-left: 4px solid #2e7d32;
+  border-radius: 5px;
+}
+
+.additional-fees h2 {
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.additional-fees ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.additional-fees li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* ========== Responsive Tables ========== */
+@media (max-width: 600px) {
+  .fee-table table, .fee-table thead, .fee-table tbody, .fee-table th, .fee-table td, .fee-table tr {
+    display: block;
+  }
+  .fee-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .fee-table tr {
+    margin-bottom: 1rem;
+  }
+  .fee-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  .fee-table td:before {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+    color: #2e7d32;
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; /* takes up all available space, pushing footer down */
+}
+
+footer {
+  background: #0077b6;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}

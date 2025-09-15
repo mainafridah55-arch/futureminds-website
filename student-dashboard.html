@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMinds - Student Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#f4f4f4;
+    }
+    .navbar {
+      background:#0077b6;
+      color:white;
+      padding:15px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .navbar a {
+      color:white;
+      text-decoration:none;
+      margin-left:15px;
+    }
+    .dashboard {
+      display:flex;
+      flex-wrap:wrap;
+      max-width:1200px;
+      margin:30px auto;
+      gap:20px;
+      padding:0 20px;
+    }
+    .sidebar {
+      flex:1 1 250px;
+      background:white;
+      border-radius:10px;
+      padding:20px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    .sidebar h2 {
+      margin-top:0;
+      color:#0077b6;
+    }
+    .sidebar ul {
+      list-style:none;
+      padding:0;
+    }
+    .sidebar ul li {
+      margin:15px 0;
+    }
+    .sidebar ul li a {
+      text-decoration:none;
+      color:#333;
+    }
+    .main-content {
+      flex:3 1 700px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .course-card {
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    .course-card h3 {
+      margin-top:0;
+      color:#0077b6;
+    }
+    .progress-bar {
+      background:#ddd;
+      border-radius:10px;
+      overflow:hidden;
+      margin:10px 0;
+      height:20px;
+    }
+    .progress {
+      height:100%;
+      background:#00b4d8;
+      width:0%;
+      text-align:center;
+      color:white;
+      line-height:20px;
+    }
+    .lesson-list ul {
+      list-style:none;
+      padding:0;
+    }
+    .lesson-list ul li {
+      margin:10px 0;
+    }
+    .lesson-list ul li a {
+      text-decoration:none;
+      color:#0077b6;
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:6px;
+      background:#e0f7fa;
+    }
+    .lesson-list ul li a:hover {
+      background:#00b4d8;
+      color:white;
+    }
+    .certificate {
+      text-align:center;
+      padding:20px;
+      background:#ffd6a5;
+      border-radius:10px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">FutureMinds</div>
+    <div>
+      <a href="#">Dashboard</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </nav>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Welcome, Student!</h2>
+      <ul>
+        <li><a href="#">My Courses</a></li>
+        <li><a href="#">Assignments</a></li>
+        <li><a href="#">Quizzes</a></li>
+        <li><a href="#">Certificates</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Course Progress -->
+      <div class="course-card">
+        <h3>Python Programming (Teens)</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width:60%;">60%</div>
+        </div>
+      </div>
+
+      <!-- Lessons -->
+      <div class="course-card lesson-list">
+        <h3>Upcoming Lessons</h3>
+        <ul>
+          <li><a href="#">Lesson 1: Python Basics</a></li>
+          <li><a href="#">Lesson 2: Functions & Loops</a></li>
+          <li><a href="#">Lesson 3: Simple Game Project</a></li>
+        </ul>
+      </div>
+
+      <!-- Certificates -->
+      <div class="certificate">
+        <h3>Completed Courses</h3>
+        <p>You have completed: Scratch Jr., Digital Literacy</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
