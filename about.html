@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About FutureMinds</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #0077b6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .navbar .logo {
+      font-size: 1.7em;
+      font-weight: bold;
+      color: #ffd60a;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .navbar ul li a:hover {
+      background: #00b4d8;
+      transform: scale(1.05);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 38px;
+      left: 0;
+      background: #00b4d8;
+      border-radius: 6px;
+      padding: 10px 0;
+      min-width: 160px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 15px;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    main h1 {
+      color: #ff6f61;
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ffd60a, #ff6f61);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-top: 35px;
+      padding-bottom: 10px;
+      border-bottom: 4px solid #ffcc33;
+      color: #ff5722;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    /* Colorful highlight boxes */
+    .highlight-box {
+      background: linear-gradient(135deg, #ffedf0, #ffe6b3);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 25px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-left: 6px solid #ff6f61;
+    }
+
+    .highlight-mission {
+      background: linear-gradient(135deg, #ffe6f0, #ffb3d1);
+      border-left: 6px solid #ff33a8;
+    }
+
+    .highlight-vision {
+      background: linear-gradient(135deg, #e0f7ff, #b3e0ff);
+      border-left: 6px solid #0077b6;
+    }
+
+    .highlight-core {
+      background: linear-gradient(135deg, #e6ffe6, #b3ffcc);
+      border-left: 6px solid #00b300;
+    }
+
+    .highlight-why {
+      background: linear-gradient(135deg, #fff3e6, #ffd699);
+      border-left: 6px solid #ff6f61;
+    }
+
+    /* Footer */
+    footer {
+      background: #0077b6;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: #ffd60a;
+    }
+
+    .footer-section {
+      margin: 20px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">FutureMinds</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Admissions ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="fees.html">Fee Structure</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="early-learners.html">Early Learners</a></li>
+          <li><a href="juniors.html">Juniors</a></li>
+          <li><a href="teens.html">Teens</a></li>
+          <li><a href="digital-literacy.html">Digital Literacy</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li class="dropdown">
+        <a href="#">More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main About Section -->
+  <main>
+    <h1>About FutureMinds</h1>
+
+    <p>FutureMinds is an online learning community designed to equip children, teens, and adults with the skills needed to thrive in today’s digital world. We specialize in AI, coding, and digital literacy, offering flexible programs that inspire creativity, problem-solving, and a love for technology.</p>
+
+    <p>We believe education should be engaging, adaptable, and practical. That’s why we focus on hands-on digital learning where students don’t just consume knowledge—they create, experiment, and apply what they’ve learned to real-world challenges.</p>
+
+    <p>Our approach combines interactive virtual lessons, project-based activities, and mentorship from experienced educators. Whether a student is just starting out or aiming to advance their skills, FutureMinds provides a supportive environment that encourages curiosity and growth.</p>
+
+    <h2>Mission</h2>
+    <div class="highlight-box highlight-mission">
+      <p>To make digital learning accessible and inspiring for all ages, empowering learners with the knowledge, creativity, and confidence to shape the future.</p>
+    </div>
+
+    <h2>Vision</h2>
+    <div class="highlight-box highlight-vision">
+      <p>To become a leading global hub for young innovators and lifelong learners in AI, coding, and digital skills, preparing them to thrive in a rapidly evolving world.</p>
+    </div>
+
+    <h2>Core Values</h2>
+    <div class="highlight-box highlight-core">
+      <ul>
+        <li><b>Innovation</b> – Creativity & problem-solving through hands-on projects.</li>
+        <li><b>Accessibility</b> – Affordable, inclusive digital learning for everyone.</li>
+        <li><b>Excellence</b> – High-quality education guided by passionate educators.</li>
+        <li><b>Community</b> – Building a global network of learners, parents, and mentors.</li>
+        <li><b>Lifelong Learning</b> – Encouraging curiosity & continuous growth.</li>
+      </ul>
+    </div>
+
+    <h2>Why FutureMinds?</h2>
+    <div class="highlight-box highlight-why">
+      <ul>
+        <li><b>Focused on the Future:</b> Skills for today and tomorrow: AI, coding, digital literacy.</li>
+        <li><b>Learning by Doing:</b> Hands-on projects and real-world application.</li>
+        <li><b>Personalized:</b> Flexible for each learner's level and pace.</li>
+        <li><b>Expert Mentorship:</b> Guidance from passionate educators.</li>
+        <li><b>Inclusive:</b> Packages, discounts, scholarships available.</li>
+        <li><b>A Global Community:</b> Connect and collaborate with peers worldwide.</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <p><strong>Contact Us:</strong> info@futureminds.com | +254 700 000000</p>
+    </div>
+
+    <div class="footer-section">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="digital-literacy.html">Digital Literacy</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="news.html">News</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+
+    <div class="footer-section">
+      <p>&copy; 2025 FutureMinds. All rights reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

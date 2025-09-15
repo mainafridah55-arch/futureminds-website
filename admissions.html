@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions | FutureMinds</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Admissions Page Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background: #0077b6;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .navbar ul li a:hover {
+      background: #00b4d8;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 38px;
+      left: 0;
+      background: #00b4d8;
+      border-radius: 6px;
+      padding: 10px 0;
+      min-width: 160px;
+    }
+
+    .dropdown-menu li {
+      margin: 0;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 15px;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .page-header {
+      background: linear-gradient(120deg, #ffb347, #ffcc33);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid #ff6f61;
+    }
+
+    .page-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .breadcrumbs {
+      font-size: 0.9em;
+      color: #fff8f0;
+    }
+
+    .admissions-content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      line-height: 1.8;
+    }
+
+    .admissions-content h2 {
+      color: #ff6f61;
+      margin-top: 30px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #ffcc33;
+    }
+
+    .admissions-content ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+
+    .admissions-content li {
+      margin-bottom: 12px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(90deg, #ffe6f0, #ffb3c6);
+      padding: 20px;
+      border-left: 6px solid #ff6f61;
+      margin: 25px 0;
+      border-radius: 12px;
+    }
+
+    .fees-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 14px 30px;
+      background: linear-gradient(135deg, #ff6f61, #ffcc33);
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .fees-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255,111,97,0.4);
+    }
+
+    footer {
+      background: #0077b6;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-section {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="logo">FutureMinds</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Admissions ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="admissions.html" class="active">Admissions</a></li>
+          <li><a href="fees.html">Fees Structure</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Our Schools</a></li>
+      <li><a href="#">About Our School</a></li>
+      <li><a href="#">More</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Admissions</h1>
+    <p class="breadcrumbs">
+      <a href="index.html" style="color:white; text-decoration:underline;">Home</a> &gt; Admissions
+    </p>
+  </div>
+
+  <!-- Admissions Content -->
+  <div class="admissions-content">
+    <!-- Direct Fees Button -->
+    <div style="text-align:center;">
+      <a href="fees.html" class="fees-button">View Fees Structure</a>
+    </div>
+
+    <h2>Welcome to FutureMinds</h2>
+    <p>
+      FutureMinds provides accessible, innovative digital learning for all ages. Our admissions process is designed to guide you smoothly from inquiry to enrollment.
+    </p>
+    <p>
+      Join a community of learners who are passionate about technology, creativity, and problem-solving.
+    </p>
+
+    <h2>How to Join FutureMinds</h2>
+    <ul>
+      <li>Inquiry – Reach out via our website or contact form.</li>
+      <li>Consultation – We'll discuss your goals and recommend programs.</li>
+      <li>Application – Fill a quick registration form (parents for children).</li>
+      <li>Trial Session – Optional assessments or trial classes for best fit.</li>
+      <li>Enrollment – Secure your spot and receive all the necessary information.</li>
+      <li>Welcome to Community – Join a global network of learners.</li>
+    </ul>
+
+    <h2>Packages and Payment Options</h2>
+    <ul>
+      <li>Per Session – Pay for individual classes.</li>
+      <li>Monthly Package – Flat rate for 4-8 sessions per month.</li>
+      <li>Quarterly Package – Save with a 3-month bundle.</li>
+      <li>Annual Package – Best value for year-round learning.</li>
+    </ul>
+
+    <h2>Flexible Payments and Discounts</h2>
+    <div class="highlight-box">
+      <ul>
+        <li>Flexible Payment Plans – Spread costs over monthly, quarterly, or annual payments.</li>
+        <li>Family Discounts – Special rates for siblings or parents enrolling together.</li>
+        <li>Early Registration Offers – Save when booking ahead.</li>
+        <li>Scholarships – Limited spots for outstanding learners.</li>
+      </ul>
+    </div>
+
+    <h2>Our Promise</h2>
+    <p>
+      We provide a clear, stress-free process with support at every step. Our goal is to make learning digital skills accessible, engaging, and rewarding for everyone.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <p><strong>Contact Us:</strong> info@futureminds.com | +254 700 000000</p>
+    </div>
+
+    <div class="footer-section">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="digital-literacy.html">Digital Literacy</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="news.html">News</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a
